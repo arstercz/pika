@@ -1,0 +1,12 @@
+[Unit]
+Description=Pika Server
+Before=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/pika/bin/pika -c /opt/pika/conf/pika.conf
+User=pika
+Group=pika
+
+[Install]
+WantedBy=multi-user.target
